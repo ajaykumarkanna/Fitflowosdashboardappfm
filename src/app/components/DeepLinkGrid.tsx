@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Dumbbell, Activity, Music, FileText, MessageSquare, Camera, Plus, Trash2, Edit2, Link as LinkIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose } from './ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose, DialogDescription } from './ui/dialog';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 
@@ -147,6 +147,9 @@ export function DeepLinkGrid() {
         <DialogContent className="bg-gray-900 border-gray-800 text-white sm:max-w-md">
           <DialogHeader>
             <DialogTitle>Edit Shortcut</DialogTitle>
+            <DialogDescription className="text-gray-400">
+              Update the details for your quick action shortcut.
+            </DialogDescription>
           </DialogHeader>
           
           {editingApp && (
